@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>IndexDB</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/genral.css">
+</head>
+
+<body>
+	<div class="wrap">
+
+		<header>
+			<div class="header__title">Задачи и планы</div>
+		</header>
+
+		<section class="mainContent">
+			<div class="contentTask__tasks">
+
+				<div class="mainContent__tools">
+					<button type="button" class="mainContent__button" id="tAdd">Добавить</button>
+					<button type="button" class="mainContent__button" id="tEdit">редактировать</button>
+					<button type="button" class="mainContent__button" id="tDelete">удалить</button>
+				</div>
+
+				<div class="contentTask__task">Task1</div>
+			</div>
+			<div class="contentTask__solutions">
+
+				<div class="mainContent__tools">
+					<button type="button" class="mainContent__button" id="sAdd">Добавить</button>
+					<button type="button" class="mainContent__button" id="sEdit">редактировать</button>
+					<button type="button" class="mainContent__button" id="sDelete">удалить</button>
+				</div>
+
+				<div class="mainContent__list" id="descList">
+					<!-- <div class="contentTask__solution target">Solution1</div> -->
+				</div>
+
+				<div class="solution__descriptor" id="descText"></div>
+			</div>
+
+			<!-- Модальное окно -->
+
+			<!-- <div class="task__add gForm">
+				<div class="form__close">x</div>
+				<label for="Name" class="description">Создание цели</label>
+				<input type="text" name="Name">
+				<div class="description">Степень важности цели</div>
+				<label for="r1" class="descriptionRadio">Неважно</label>
+				<input type="radio" id="r1" class="GForm__radio" value="1" name="important">
+				<label for="r2" class="descriptionRadio">Нужно сделать</label>
+				<input type="radio" id="r2" class="GForm__radio" value="2" name="important">
+				<label for="r3" class="descriptionRadio">Очень важно</label>
+				<input type="radio" id="r3" class="GForm__radio" value="3" name="important">
+				<div class="compleate">Добавить!</div>
+			</div> -->
+
+			<!-- <div class="solution__add gForm">
+				<div class="form__close">x</div>
+				<label for="Name" class="description">Введите Решение</label>
+				<textarea name="Name"></textarea>
+				<div class="compleate">Добавить!</div>
+			</div> -->
+
+			<!-- <div class="task__edit gForm">
+				<div class="form__close">x</div>
+				<label for="Name" class="description">Изменение цели</label>
+				<input type="text" name="Name">
+				<div class="description">Степень важности цели</div>
+				<label for="r1" class="descriptionRadio">Неважно</label>
+				<input type="radio" id="r1" class="GForm__radio" value="1" name="important">
+				<label for="r2" class="descriptionRadio">Нужно сделать</label>
+				<input type="radio" id="r2" class="GForm__radio" value="2" name="important">
+				<label for="r3" class="descriptionRadio">Очень важно</label>
+				<input type="radio" id="r3" class="GForm__radio" value="3" name="important">
+				<div class="compleate">Изменить!</div>
+			</div> -->
+
+			<!-- <div class="solution__edit gForm">
+				<div class="form__close">x</div>
+				<label for="Name" class="description">Изменить решение для этой задачи</label>
+				<textarea name="Name"></textarea>
+				<div class="compleate">Изменить!</div>
+			</div> -->
+
+			<!-- <div class="content__delete gForm">
+				<div class="form__close">x</div>
+				<div class="delete__title">Вы уверены что хотите удалить?</div>
+				<div class="delte__buttons">
+					<div class="done">Да</div>
+					<div class="nope">Нет</div>
+				</div>
+			</div> -->
+
+			<!-- <div class="modalBlock"></div> -->
+			<!-- /Модальное окно -->
+
+		</section>
+
+		<div class="menu" data-menu="true">
+			<div class="menu__body">
+				<div class="menu__list">
+					<button type="button" id="authorBtn" class="menu__item">Автор</button>
+					<button type="button" id="clearAll" class="menu__item">Очистить всё</button>
+				</div>
+			</div>
+			<div class="menu__open" data-menu-toggler="true">
+				<img src="imgs/geer.svg" alt="menu" data-menu-toggler="true">
+			</div>
+		</div>
+
+		<footer>
+			<div class="footer__title">Конец приложения</div>
+		</footer>
+		<script type="module" src="scripts/general.js"></script>
+	</div>
+</body>
+
+</html>

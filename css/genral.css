@@ -1,0 +1,523 @@
+* {
+	box-sizing: border-box;
+	font-size: 18px;
+	margin: 0;
+	padding: 0px;
+}
+
+.wrap {
+	max-width: 1170px;
+	overflow-x: hidden;
+	margin: 0 auto;
+	background: #eee;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+header {
+	font-size: 1.5em;
+	padding: 10px;
+	text-align: center;
+}
+
+.header__title {
+	display: inline-block;
+}
+
+.mainContent {
+	flex-grow: 1;
+	display: flex;
+	margin: 0 -15px;
+	flex-wrap: wrap;
+}
+
+.mainContent__tools {
+	font-size: 0px;
+	margin-bottom: 10px;
+}
+
+.mainContent__button {
+	font-size: 20px;
+	padding: 10px;
+	display: inline-block;
+	margin: 0 10px;
+	border: 1px solid white;
+	border-radius: 6px;
+	background-color: #ccc;
+	cursor: pointer;
+	box-shadow: 1px 4px;
+}
+
+.gForm__notacion {
+	color: red;
+	width: 80%;
+	margin: 0 auto;
+}
+
+.mainContent__button:active {
+	transform: translateY(4px);
+	box-shadow: none;
+}
+
+.contentTask__tasks {
+	flex-grow: 1;
+	background-color: #ddd;
+	padding: 10px 10px 10px 25px;
+	margin-right: 25px;
+	border-radius: 9px;
+	border: 3px solid black;
+	min-width: 480px;
+	margin-top: 10px;
+	overflow: auto;
+	max-height: 70%;
+	max-height: 800px;
+}
+
+.contentTask__task,
+.contentTask__solution {
+	cursor: pointer;
+	padding: 5px;
+	border-radius: 4px;
+}
+
+.contentTask__solution {
+	border-left: 4px solid #08f;
+	margin: 5px 0;
+}
+
+.contentTask__task {
+	padding-right: 35px;
+}
+
+.taskIndicator {
+	float: right;
+	width: 30px;
+	border-radius: 10px;
+	padding: 10px;
+}
+
+.contentTask__solutions {
+	margin-top: 10px;
+	flex-grow: 1;
+	background-color: #ddd;
+	padding: 10px 10px 10px 25px;
+	border-radius: 9px;
+	border: 3px solid black;
+	min-width: 480px;
+	margin-left: 25px;
+	overflow: auto;
+	max-height: 800px;
+	position: relative;
+}
+
+.contentTask__solution {
+}
+
+.modalBlock {
+	position: absolute;
+	z-index: 5;
+	background: rgba(0, 0, 0, 0.6);
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.task__add input {
+	width: 90%;
+	margin: 10px auto;
+	display: block;
+}
+
+.task__add,
+.task__edit,
+.solution__add,
+.solution__edit,
+.content__delete {
+	position: absolute;
+	z-index: 10;
+	background-color: white;
+	border-radius: 25px;
+	padding: 15px;
+	left: 0;
+	right: 0;
+	margin: auto;
+	max-width: 60%;
+}
+
+.task__edit input {
+	width: 90%;
+	display: block;
+	margin: 10px auto;
+}
+
+.task__add .GForm__radio,
+.task__edit .GForm__radio {
+	display: inline-block;
+	width: auto;
+}
+
+.solution__add {
+}
+
+.description,
+.descriptionRadio {
+	margin: 0 auto;
+	display: block;
+	width: 60%;
+	text-align: center;
+	padding: 0 10px 10px;
+	font-size: 20px;
+}
+
+.descriptionRadio {
+	display: inline-block;
+	width: 60%;
+	text-align: left;
+}
+
+.compleate {
+	margin: 10px auto 0;
+	display: block;
+	width: 60%;
+	text-align: center;
+	border-radius: 8px;
+	background-color: #33cc33;
+	border: 1px solid #11aa11;
+	box-shadow: 1px 1px 4px 0 #119911;
+	padding: 10px;
+	cursor: pointer;
+}
+
+.solution__edit textarea,
+.solution__add textarea {
+	display: block;
+	resize: none;
+	width: 100%;
+	height: 300px;
+	border-right: 2px solid #ff6600;
+	padding: 5px;
+}
+
+.solution__edit textarea:focus,
+.solution__add textarea:focus {
+	outline: none;
+	border-right: solid 4px #ff6600;
+}
+
+.content__delete {
+}
+
+.delete__title {
+	margin: 0 auto;
+	padding: 5px;
+	width: 60%;
+	text-align: center;
+}
+
+.delte__buttons {
+	font-size: 0px;
+	padding: 10px;
+}
+
+.form__close {
+	background-color: #ff3333;
+	color: white;
+	position: absolute;
+	padding: 2px;
+	width: 30px;
+	height: 30px;
+	right: 10px;
+	top: 10px;
+	text-align: center;
+	line-height: 25px;
+	cursor: pointer;
+	border-radius: 4px 15px 4px 4px;
+	box-shadow: 1px 1px 4px 0 #aa3333;
+}
+
+.done {
+	font-size: 18px;
+	display: inline-block;
+	text-align: center;
+	width: 46%;
+	cursor: pointer;
+	padding: 10px;
+	margin: 5px 2%;
+	background-color: #33cc33;
+}
+
+.nope {
+	font-size: 18px;
+	display: inline-block;
+	text-align: center;
+	width: 46%;
+	cursor: pointer;
+	padding: 10px;
+	margin: 5px 2%;
+	background-color: #ff3333;
+}
+
+.notacion {
+	margin-left: 15px;
+	color: red;
+}
+
+.target {
+	background: #ff6600;
+}
+
+footer {
+	font-size: 1.5em;
+	padding: 10px;
+	text-align: center;
+}
+
+.footer__title {
+}
+
+.contentTask__tasks {
+	overflow: auto;
+	position: relative;
+}
+
+.contentTask__solutions {
+	overflow: auto;
+	position: relative;
+	padding-bottom: 0;
+}
+
+.mainContent__tools {
+	position: sticky;
+	top: 0;
+	background-color: rgba(100, 100, 100, 0.5);
+	padding: 10px;
+	border-radius: 5px;
+}
+
+.contentTask__solutions .mainContent__tools {
+	position: sticky;
+	top: 0;
+	background-color: rgba(100, 100, 100, 0.5);
+	padding: 10px;
+	border-radius: 5px;
+	width: 100%;
+	margin-left: -15px;
+}
+
+.solution__descriptor {
+	border-radius: 15px;
+	background-color: #ccc;
+	border-top: 1px solid black;
+	font-size: 16px;
+	text-align: left;
+	padding: 10px;
+	overflow: auto;
+	word-break: break-all;
+	height: 150px;
+
+	position: sticky;
+	bottom: 0;
+	margin-left: -25px;
+	margin-right: -10px;
+}
+
+.mainContent__list {
+	min-height: 62%;
+}
+
+.mainContent__list:empty {
+	min-height: 62.8%;
+}
+
+/* toast */
+.toast {
+	position: fixed;
+	right: 10px;
+	top: 10px;
+	padding: 10px;
+	background-color: #f88;
+	border-radius: 8px;
+	transform: translate(0);
+	opacity: 1;
+	cursor: pointer;
+	animation: enterToast 0.5s;
+}
+
+@keyframes enterToast {
+	from {
+		transform: translate(100%);
+		opacity: 0;
+	}
+	to {
+		transform: translate(0);
+		opacity: 1;
+	}
+}
+
+@keyframes leaveToast {
+	from {
+		transform: translate(0);
+		opacity: 1;
+	}
+	to {
+		transform: translate(100%);
+		opacity: 0;
+	}
+}
+
+@media (max-width: 640px) {
+	body .toast {
+		font-size: 20px;
+	}
+}
+
+/* toast \\*/
+
+/* menu */
+
+.menu {
+	position: fixed;
+	right: 5px;
+	bottom: 5px;
+}
+.menu__body {
+	height: 0;
+	opacity: 0;
+	overflow: hidden;
+	transition: opacity 0.3s, height 0.5s;
+}
+
+.menu.open .menu__open img {
+	transform: rotateZ(45deg);
+}
+
+.menu.open .menu__body {
+	height: 30vh;
+	opacity: 1;
+	overflow: hidden;
+	background-color: #fff;
+	box-shadow: 0 0 3px 0 #333;
+}
+
+.menu__list {
+	padding: 2px;
+	padding-bottom: 70px;
+	overflow: auto;
+	height: 100%;
+}
+.menu__item {
+	display: block;
+	width: 100%;
+	margin: 3px 0;
+	padding: 3px;
+}
+.menu__open {
+	position: absolute;
+	right: 0;
+	bottom: 3px;
+	padding: 3px;
+	background-color: #eee;
+	border-radius: 10px;
+	border: 2px solid #000;
+}
+
+.menu__open img {
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+	transition: transform 0.5s;
+}
+
+@media screen and (max-width: 640px) {
+	.menu__item {
+		padding: 15px;
+		font-size: 16px;
+	}
+}
+
+/* menu \\*/
+
+@media screen and (max-width: 990px) {
+	.mainContent__list:empty {
+		min-height: 46%;
+	}
+
+	.solution__descriptor {
+		height: 80px;
+		overflow: auto;
+	}
+
+	.contentTask__tasks {
+		height: 40vh;
+	}
+
+	.contentTask__solutions {
+		height: 42vh;
+		margin-right: 10px;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	.mainContent__button {
+		font-size: calc(8px + 1vw);
+	}
+
+	.contentTask__solution {
+		margin-left: 0;
+		min-width: 200px;
+		margin-right: -5px;
+		font-size: calc(10px + 1vw);
+		padding-right: 5px;
+	}
+
+	.contentTask__task {
+		min-width: 200px;
+		margin-right: 0;
+		font-size: calc(10px + 1vw);
+		padding-right: 5px;
+	}
+
+	.solution__descriptor {
+		font-size: calc(12px + 1vw);
+	}
+
+	.task__add,
+	.task__edit,
+	.solution__add,
+	.solution__edit,
+	.content__delete {
+		max-width: 100%;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.mainContent {
+		margin: 0;
+	}
+
+	.mainContent__button {
+		font-size: calc(6px + 1vw);
+		margin: 0 2px;
+	}
+
+	.contentTask__solutions {
+		margin-left: 0;
+		min-width: 200px;
+		margin-right: -5px;
+	}
+
+	.contentTask__tasks {
+		min-width: 200px;
+		margin-right: 0;
+	}
+
+	.mainContent__list {
+		min-height: 43%;
+	}
+
+	.mainContent__list:empty {
+		min-height: 49.9%;
+	}
+}
